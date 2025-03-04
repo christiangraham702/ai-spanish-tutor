@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Card from './Card';
 import Flashcard from './Flashcard';
 import Quiz from './Quiz';
-import { Button } from './Button';
 
 interface FlashcardContent {
   version: string;
