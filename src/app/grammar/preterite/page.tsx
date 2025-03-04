@@ -46,17 +46,17 @@ const PreteritePage = () => {
   const quizQuestions = [
     {
       id: 1,
-      question: 'Which form of "hablar" is correct for "yo" in the preterite tense?',
+      question: 'Which form of &quot;hablar&quot; is correct for &quot;yo&quot; in the preterite tense?',
       options: ['hablé', 'hablo', 'hablaba', 'hablaré'],
       correctAnswer: 'hablé',
-      explanation: 'For regular -AR verbs in the preterite tense, "yo" form ends in -é.',
+      explanation: 'For regular -AR verbs in the preterite tense, &quot;yo&quot; form ends in -é.',
     },
     {
       id: 2,
-      question: 'What is the correct preterite form of "ser" for "ellos"?',
+      question: 'What is the correct preterite form of &quot;ser&quot; for &quot;ellos&quot;?',
       options: ['son', 'eran', 'fueron', 'sean'],
       correctAnswer: 'fueron',
-      explanation: '"Ser" is irregular in the preterite tense. "Fueron" is the correct form for "ellos/ellas/ustedes".',
+      explanation: '&quot;Ser&quot; is irregular in the preterite tense. &quot;Fueron&quot; is the correct form for &quot;ellos/ellas/ustedes&quot;.',
     },
     {
       id: 3,
@@ -68,7 +68,7 @@ const PreteritePage = () => {
         'Ayer comeré una manzana.',
       ],
       correctAnswer: 'Ayer comí una manzana.',
-      explanation: 'The preterite tense is used for completed actions in the past. "Comí" is the correct preterite form of "comer".',
+      explanation: 'The preterite tense is used for completed actions in the past. &quot;Comí&quot; is the correct preterite form of &quot;comer&quot;.',
     },
   ];
 
@@ -82,7 +82,7 @@ const PreteritePage = () => {
         <h1 className="text-3xl font-bold text-gray-900">El Pretérito (The Preterite Tense)</h1>
         <p className="text-lg text-gray-600">
           The preterite tense is used to describe completed actions in the past. It answers the question
-          "What happened?" or "What did you do?"
+          &quot;What happened?&quot; or &quot;What did you do?&quot;
         </p>
       </motion.div>
 
@@ -90,8 +90,8 @@ const PreteritePage = () => {
         <h2 className="text-2xl font-semibold text-gray-900">Regular -AR Verbs</h2>
         <Card intent="accent" size="md">
           <p className="text-gray-600 mb-4">
-            Regular -AR verbs follow a consistent pattern in the preterite tense. Here's how to conjugate
-            them using "hablar" (to speak) as an example:
+            Regular -AR verbs follow a consistent pattern in the preterite tense. Here&apos;s how to conjugate
+            them using &quot;hablar&quot; (to speak) as an example:
           </p>
           <ConjugationTable {...regularArVerb} showTranslations />
         </Card>

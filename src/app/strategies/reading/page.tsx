@@ -44,9 +44,6 @@ interface Question {
   context: string;
 }
 
-// Type for error handling
-type ApiErrorType = Error;
-
 const ReadingStrategiesPage = () => {
   const [practiceText, setPracticeText] = useState(`
 María es estudiante de medicina en la universidad. Todos los días, ella se despierta temprano y toma el autobús para ir a sus clases. Le encanta estudiar el cuerpo humano y ayudar a las personas. En el futuro, quiere ser doctora en un hospital grande.
