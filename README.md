@@ -55,6 +55,13 @@ To prevent excessive OpenAI API usage, the application implements a daily limit 
 - When the limit is reached, API calls will return a 429 error with a message
 - You can adjust the limit by changing the `DAILY_API_LIMIT` environment variable
 
+### API Counter Implementation
+
+- In local development, the counter uses a file-based approach (`api-usage-counter.json`)
+- In production (Vercel), the counter uses an in-memory approach that resets when serverless functions restart
+  - This means the counter might reset more frequently than every 24 hours in production
+  - For a more persistent solution, consider implementing a database-backed counter
+
 ## Content Management
 
 The flashcards and quizzes for verb conjugation practice can be edited in:

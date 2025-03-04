@@ -12,23 +12,35 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Function to read the usage counter file
+// In-memory counter for Vercel deployment
+let apiCallsToday = 0;
+let lastResetDate = new Date().toISOString().split('T')[0]; // Current date in YYYY-MM-DD format
+
+// Function to read the usage counter - handles both file-based and in-memory approaches
 async function readUsageCounter(): Promise<number> {
-  const counterPath = path.join(process.cwd(), 'api-usage-counter.json');
+  const today = new Date().toISOString().split('T')[0]; // Current date in YYYY-MM-DD format
   
-  // Create the counter file if it doesn't exist
-  if (!fs.existsSync(counterPath)) {
-    const initialData = { 
-      date: new Date().toISOString().split('T')[0], // Current date (YYYY-MM-DD)
-      count: 0 
-    };
-    fs.writeFileSync(counterPath, JSON.stringify(initialData), 'utf-8');
-    return 0;
+  // If the date changed, reset the in-memory counter
+  if (today !== lastResetDate) {
+    apiCallsToday = 0;
+    lastResetDate = today;
   }
-  
+
   try {
+    // Try to use file-based counter (works in development)
+    const counterPath = path.join(process.cwd(), 'api-usage-counter.json');
+    
+    // Create the counter file if it doesn't exist
+    if (!fs.existsSync(counterPath)) {
+      const initialData = { 
+        date: today,
+        count: 0 
+      };
+      fs.writeFileSync(counterPath, JSON.stringify(initialData), 'utf-8');
+      return 0;
+    }
+    
     const data = JSON.parse(fs.readFileSync(counterPath, 'utf-8'));
-    const today = new Date().toISOString().split('T')[0];
     
     // Reset counter if it's a new day
     if (data.date !== today) {
@@ -39,17 +51,28 @@ async function readUsageCounter(): Promise<number> {
     
     return data.count;
   } catch (error) {
-    console.error('Error reading usage counter:', error);
-    return 0;
+    // If file-based approach fails (e.g., on Vercel), use in-memory counter
+    console.log('Using in-memory counter due to filesystem constraints');
+    return apiCallsToday;
   }
 }
 
-// Function to increment the usage counter
+// Function to increment the usage counter - handles both file-based and in-memory approaches
 async function incrementUsageCounter(): Promise<void> {
-  const counterPath = path.join(process.cwd(), 'api-usage-counter.json');
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().split('T')[0]; // Current date in YYYY-MM-DD format
+  
+  // Always increment the in-memory counter
+  if (today !== lastResetDate) {
+    apiCallsToday = 1;
+    lastResetDate = today;
+  } else {
+    apiCallsToday += 1;
+  }
   
   try {
+    // Try to update file-based counter (works in development)
+    const counterPath = path.join(process.cwd(), 'api-usage-counter.json');
+    
     const data = JSON.parse(fs.readFileSync(counterPath, 'utf-8'));
     
     // If it's a new day, reset the counter
@@ -63,7 +86,8 @@ async function incrementUsageCounter(): Promise<void> {
     data.count += 1;
     fs.writeFileSync(counterPath, JSON.stringify(data), 'utf-8');
   } catch (error) {
-    console.error('Error incrementing usage counter:', error);
+    // If file operations fail, we're already using the in-memory counter
+    console.log('Using in-memory counter for increments due to filesystem constraints');
   }
 }
 
