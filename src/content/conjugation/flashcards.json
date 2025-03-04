@@ -1,0 +1,56 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Present Tense",
+      "cards": [
+        {
+          "id": "present-1",
+          "front": "Present tense of \"hablar\" (yo)",
+          "back": "hablo",
+          "example": "Yo hablo español todos los días."
+        },
+        {
+          "id": "present-2",
+          "front": "Present tense endings for -ar verbs",
+          "back": "-o, -as, -a, -amos, -an",
+          "example": "hablar → hablo, hablas, habla, hablamos, hablan"
+        }
+      ]
+    },
+    {
+      "name": "Preterite Tense",
+      "cards": [
+        {
+          "id": "preterite-1",
+          "front": "Preterite tense of \"hablar\" (yo)",
+          "back": "hablé",
+          "example": "Yo hablé con mi madre ayer."
+        },
+        {
+          "id": "preterite-2",
+          "front": "Preterite tense ending for -ar verbs (ellos)",
+          "back": "-aron",
+          "example": "Ellos hablaron, cantaron, bailaron"
+        }
+      ]
+    },
+    {
+      "name": "Future Tense",
+      "cards": [
+        {
+          "id": "future-1",
+          "front": "Future tense ending (yo)",
+          "back": "-é",
+          "example": "Yo hablaré, comeré, viviré"
+        },
+        {
+          "id": "future-2",
+          "front": "Future tense endings (all verbs)",
+          "back": "-é, -ás, -á, -emos, -án",
+          "example": "hablar → hablaré, hablarás, hablará, hablaremos, hablarán"
+        }
+      ]
+    }
+  ]
+} 

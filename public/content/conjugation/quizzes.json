@@ -1,0 +1,171 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Present Tense",
+      "questions": [
+        {
+          "id": "present-q1",
+          "question": "Fill in the blank: Yo ____ español. (hablar)",
+          "options": ["hablo", "hablas", "habla", "hablamos"],
+          "correctAnswer": "hablo",
+          "explanation": "For -ar verbs in the present tense, the yo form ends in -o."
+        },
+        {
+          "id": "present-q2",
+          "question": "What is the present tense of \"comer\" for ellos?",
+          "options": ["como", "comes", "comemos", "comen"],
+          "correctAnswer": "comen",
+          "explanation": "For -er verbs in the present tense, the ellos/ellas/ustedes form ends in -en."
+        },
+        {
+          "id": "present-q3",
+          "question": "Choose the correct present tense conjugation: Nosotros ____ en Madrid. (vivir)",
+          "options": ["vive", "vivimos", "viven", "vives"],
+          "correctAnswer": "vivimos",
+          "explanation": "For -ir verbs in the present tense, the nosotros form ends in -imos."
+        }
+      ]
+    },
+    {
+      "name": "Preterite Tense",
+      "questions": [
+        {
+          "id": "preterite-q1",
+          "question": "Fill in the blank: Tú ____ la película ayer. (ver)",
+          "options": ["viste", "vio", "vimos", "vieron"],
+          "correctAnswer": "viste",
+          "explanation": "The preterite tense ending for -er/-ir verbs in the tú form is -iste."
+        },
+        {
+          "id": "preterite-q2",
+          "question": "What is the preterite tense of \"hablar\" for ellos?",
+          "options": ["hablo", "hablaste", "hablamos", "hablaron"],
+          "correctAnswer": "hablaron",
+          "explanation": "The preterite tense ending for -ar verbs in the ellos/ellas/ustedes form is -aron."
+        },
+        {
+          "id": "preterite-q3",
+          "question": "Choose the correct preterite conjugation: Ayer, ella ____ al cine. (ir)",
+          "options": ["va", "fue", "iba", "fui"],
+          "correctAnswer": "fue",
+          "explanation": "Ir is irregular in the preterite tense: fui, fuiste, fue, fuimos, fueron."
+        }
+      ]
+    },
+    {
+      "name": "Future Tense",
+      "questions": [
+        {
+          "id": "future-q1",
+          "question": "Fill in the blank: Mañana yo ____ un examen. (tener)",
+          "options": ["tengo", "tendré", "tenía", "tuve"],
+          "correctAnswer": "tendré",
+          "explanation": "The future tense of tener follows an irregular pattern: tendré, tendrás, tendrá, tendremos, tendrán."
+        },
+        {
+          "id": "future-q2",
+          "question": "What is the correct future tense ending for nosotros?",
+          "options": ["-é", "-ás", "-emos", "-án"],
+          "correctAnswer": "-emos",
+          "explanation": "For all verbs in the future tense, the nosotros form ends in -emos."
+        }
+      ]
+    },
+    {
+      "name": "Stem Changes",
+      "questions": [
+        {
+          "id": "stem-q1",
+          "question": "What is the correct stem change for \"pensar\" in the present tense (yo)?",
+          "options": ["penso", "pienso", "pienzo", "pensio"],
+          "correctAnswer": "pienso",
+          "explanation": "Pensar follows the e → ie stem change pattern in all forms except nosotros/vosotros."
+        },
+        {
+          "id": "stem-q2",
+          "question": "Choose the correct form: Ella ____ a las 8. (dormir)",
+          "options": ["dorme", "duerme", "durme", "dormie"],
+          "correctAnswer": "duerme",
+          "explanation": "Dormir follows the o → ue stem change pattern in all forms except nosotros/vosotros."
+        }
+      ]
+    },
+    {
+      "name": "Reflexive Verbs",
+      "questions": [
+        {
+          "id": "reflexive-q1",
+          "question": "Choose the correct reflexive pronoun: Yo ____ levanto a las 7.",
+          "options": ["me", "te", "se", "nos"],
+          "correctAnswer": "me",
+          "explanation": "Reflexive pronouns must match the subject. For yo, use 'me'."
+        },
+        {
+          "id": "reflexive-q2",
+          "question": "Fill in the blank: Nosotros ____ temprano. (despertarse)",
+          "options": ["despiertamos", "despertamos", "nos despertamos", "despiertan"],
+          "correctAnswer": "nos despertamos",
+          "explanation": "Despertarse is a reflexive verb, and in nosotros form it stays regular: nos despertamos."
+        }
+      ]
+    },
+    {
+      "name": "Indirect Object Pronouns",
+      "questions": [
+        {
+          "id": "iop-q1",
+          "question": "What is the indirect object pronoun for 'them' (masculine)?",
+          "options": ["le", "les", "nos", "se"],
+          "correctAnswer": "les",
+          "explanation": "The indirect object pronoun for 'them' (masculine or feminine) is 'les'."
+        },
+        {
+          "id": "iop-q2",
+          "question": "Choose the correct indirect object pronoun: Ella ____ dio un regalo a su madre.",
+          "options": ["le", "les", "me", "nos"],
+          "correctAnswer": "le",
+          "explanation": "Le is used for singular indirect objects, in this case, 'su madre'."
+        }
+      ]
+    },
+    {
+      "name": "Food Vocabulary",
+      "questions": [
+        {
+          "id": "food-q1",
+          "question": "How do you say 'apple' in Spanish?",
+          "options": ["naranja", "manzana", "uva", "pera"],
+          "correctAnswer": "manzana",
+          "explanation": "The Spanish word for apple is 'manzana'."
+        },
+        {
+          "id": "food-q2",
+          "question": "What is the Spanish word for 'carrot'?",
+          "options": ["lechuga", "zanahoria", "brócoli", "papa"],
+          "correctAnswer": "zanahoria",
+          "explanation": "The Spanish word for carrot is 'zanahoria'."
+        }
+      ]
+    },
+    {
+      "name": "Health & Body Parts Vocabulary",
+      "questions": [
+        {
+          "id": "health-q1",
+          "question": "What is the Spanish word for 'head'?",
+          "options": ["boca", "mano", "cabeza", "pie"],
+          "correctAnswer": "cabeza",
+          "explanation": "The Spanish word for 'head' is 'cabeza'."
+        },
+        {
+          "id": "health-q2",
+          "question": "Translate: 'My stomach hurts.'",
+          "options": ["Me duele la cabeza.", "Tengo fiebre.", "Me duele el estómago.", "Estoy cansado."],
+          "correctAnswer": "Me duele el estómago.",
+          "explanation": "To say 'My stomach hurts' in Spanish, use 'Me duele el estómago'."
+        }
+      ]
+    }
+  ]
+}

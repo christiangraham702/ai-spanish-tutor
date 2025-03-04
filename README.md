@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Spanish Learning Website
 
-## Getting Started
+A comprehensive Spanish learning platform with grammar, vocabulary, and interactive exercises.
 
-First, run the development server:
+## Features
+
+- Verb conjugation tables and practice exercises
+- Reading comprehension exercises with AI-generated feedback
+- Flashcards and quizzes for vocabulary and grammar
+- Short answer questions with AI review
+
+## Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This application requires the following environment variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `OPENAI_API_KEY`: Your OpenAI API key
+- `DAILY_API_LIMIT`: Maximum number of OpenAI API calls per day (default: 20)
 
-## Learn More
+### Local Development
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file in the root directory with the following content:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+OPENAI_API_KEY=your_openai_api_key_here
+DAILY_API_LIMIT=20
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel Deployment
 
-## Deploy on Vercel
+When deploying to Vercel, set the environment variables in the Vercel dashboard:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Go to your project in the Vercel dashboard
+2. Click on "Settings" tab
+3. Click on "Environment Variables"
+4. Add the required environment variables:
+   - `OPENAI_API_KEY`: Your OpenAI API key
+   - `DAILY_API_LIMIT`: Maximum number of OpenAI API calls per day (optional, defaults to 20)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## API Usage Limits
+
+To prevent excessive OpenAI API usage, the application implements a daily limit for API calls:
+
+- By default, the application allows 20 API calls per day across all users
+- The limit resets at midnight UTC
+- When the limit is reached, API calls will return a 429 error with a message
+- You can adjust the limit by changing the `DAILY_API_LIMIT` environment variable
+
+## Content Management
+
+The flashcards and quizzes for verb conjugation practice can be edited in:
+
+- `public/content/conjugation/flashcards.json`
+- `public/content/conjugation/quizzes.json`
+
+Follow the existing format to add new categories, cards, or questions.
+
+## Security Considerations
+
+- The OpenAI API key is stored as an environment variable and never exposed to clients
+- Usage tracking is done server-side to prevent manipulation
+- API rate limiting helps prevent abuse and excessive costs
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

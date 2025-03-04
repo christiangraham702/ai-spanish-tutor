@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Present Tense",
+      "questions": [
+        {
+          "id": "present-q1",
+          "question": "Fill in the blank: Yo ____ español. (hablar)",
+          "options": ["hablo", "hablas", "habla", "hablamos"],
+          "correctAnswer": "hablo",
+          "explanation": "For -ar verbs in the present tense, the yo form ends in -o."
+        },
+        {
+          "id": "present-q2",
+          "question": "What is the present tense of \"comer\" for ellos?",
+          "options": ["como", "comes", "comemos", "comen"],
+          "correctAnswer": "comen",
+          "explanation": "For -er verbs in the present tense, the ellos/ellas/ustedes form ends in -en."
+        }
+      ]
+    },
+    {
+      "name": "Preterite Tense",
+      "questions": [
+        {
+          "id": "preterite-q1",
+          "question": "Fill in the blank: Tú ____ la película ayer. (ver)",
+          "options": ["viste", "vio", "vimos", "vieron"],
+          "correctAnswer": "viste",
+          "explanation": "The preterite tense ending for -er/-ir verbs in the tú form is -iste."
+        },
+        {
+          "id": "preterite-q2",
+          "question": "What is the preterite tense of \"hablar\" for ellos?",
+          "options": ["hablo", "hablaste", "hablamos", "hablaron"],
+          "correctAnswer": "hablaron",
+          "explanation": "The preterite tense ending for -ar verbs in the ellos/ellas/ustedes form is -aron."
+        }
+      ]
+    },
+    {
+      "name": "Stem Changes",
+      "questions": [
+        {
+          "id": "stem-q1",
+          "question": "What is the correct stem change for \"pensar\" in the present tense (yo)?",
+          "options": ["penso", "pienso", "pienzo", "pensio"],
+          "correctAnswer": "pienso",
+          "explanation": "Pensar follows the e → ie stem change pattern in all forms except nosotros/vosotros."
+        },
+        {
+          "id": "stem-q2",
+          "question": "Choose the correct form: Ella ____ a las 8. (dormir)",
+          "options": ["dorme", "duerme", "durme", "dormie"],
+          "correctAnswer": "duerme",
+          "explanation": "Dormir follows the o → ue stem change pattern in all forms except nosotros/vosotros."
+        }
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,189 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Present Tense",
+      "cards": [
+        {
+          "id": "present-1",
+          "front": "Present tense of \"hablar\" (yo)",
+          "back": "hablo",
+          "example": "Yo hablo español todos los días."
+        },
+        {
+          "id": "present-2",
+          "front": "Present tense endings for -ar verbs",
+          "back": "-o, -as, -a, -amos, -an",
+          "example": "hablar → hablo, hablas, habla, hablamos, hablan"
+        },
+        {
+          "id": "present-3",
+          "front": "Present tense of \"vivir\" (nosotros)",
+          "back": "vivimos",
+          "example": "Nosotros vivimos en España."
+        }
+      ]
+    },
+    {
+      "name": "Preterite Tense",
+      "cards": [
+        {
+          "id": "preterite-1",
+          "front": "Preterite tense of \"hablar\" (yo)",
+          "back": "hablé",
+          "example": "Yo hablé con mi madre ayer."
+        },
+        {
+          "id": "preterite-2",
+          "front": "Preterite tense ending for -ar verbs (ellos)",
+          "back": "-aron",
+          "example": "Ellos hablaron, cantaron, bailaron"
+        },
+        {
+          "id": "preterite-3",
+          "front": "Preterite tense of \"dormir\" (él/ella/usted)",
+          "back": "durmió",
+          "example": "Él durmió ocho horas anoche."
+        },
+        {
+          "id": "preterite-4",
+          "front": "Preterite tense of \"hacer\" (yo)",
+          "back": "hice",
+          "example": "Ayer hice mi tarea."
+        }
+      ]
+    },
+    {
+      "name": "Future Tense",
+      "cards": [
+        {
+          "id": "future-1",
+          "front": "Future tense ending (yo)",
+          "back": "-é",
+          "example": "Yo hablaré, comeré, viviré"
+        },
+        {
+          "id": "future-2",
+          "front": "Future tense endings (all verbs)",
+          "back": "-é, -ás, -á, -emos, -án",
+          "example": "hablar → hablaré, hablarás, hablará, hablaremos, hablarán"
+        },
+        {
+          "id": "future-3",
+          "front": "Future tense of \"tener\" (yo)",
+          "back": "tendré",
+          "example": "Mañana tendré una reunión importante."
+        },
+        {
+          "id": "future-4",
+          "front": "Future tense of \"salir\" (nosotros)",
+          "back": "saldremos",
+          "example": "Nosotros saldremos de viaje el próximo mes."
+        }
+      ]
+    },
+    {
+      "name": "Stem-Changing Verbs",
+      "cards": [
+        {
+          "id": "stem-1",
+          "front": "e → ie verb (pensar, yo)",
+          "back": "pienso",
+          "example": "Yo pienso que esta comida es deliciosa."
+        },
+        {
+          "id": "stem-2",
+          "front": "o → ue verb (dormir, tú)",
+          "back": "duermes",
+          "example": "Tú duermes ocho horas cada noche."
+        },
+        {
+          "id": "stem-3",
+          "front": "e → i verb (pedir, ella)",
+          "back": "pide",
+          "example": "Ella pide una ensalada en el restaurante."
+        }
+      ]
+    },
+    {
+      "name": "Reflexive Verbs",
+      "cards": [
+        {
+          "id": "reflexive-1",
+          "front": "Reflexive verb \"levantarse\" (yo)",
+          "back": "me levanto",
+          "example": "Yo me levanto a las siete de la mañana."
+        },
+        {
+          "id": "reflexive-2",
+          "front": "Reflexive verb \"vestirse\" (nosotros)",
+          "back": "nos vestimos",
+          "example": "Nosotros nos vestimos rápido por la mañana."
+        }
+      ]
+    },
+    {
+      "name": "Indirect Object Pronouns",
+      "cards": [
+        {
+          "id": "iop-1",
+          "front": "Indirect object pronoun for \"me\"",
+          "back": "me",
+          "example": "Mi madre me dio un regalo."
+        },
+        {
+          "id": "iop-2",
+          "front": "Indirect object pronoun for \"them\" (masculine)",
+          "back": "les",
+          "example": "Les compré unos libros a mis amigos."
+        }
+      ]
+    },
+    {
+      "name": "Food Vocabulary",
+      "cards": [
+        {
+          "id": "food-1",
+          "front": "How do you say \"apple\" in Spanish?",
+          "back": "manzana",
+          "example": "Me gusta comer una manzana todos los días."
+        },
+        {
+          "id": "food-2",
+          "front": "What is the Spanish word for \"carrot\"?",
+          "back": "zanahoria",
+          "example": "Las zanahorias son buenas para la vista."
+        },
+        {
+          "id": "food-3",
+          "front": "Translate: \"I like to eat fish.\"",
+          "back": "Me gusta comer pescado.",
+          "example": "Me gusta comer pescado con arroz."
+        }
+      ]
+    },
+    {
+      "name": "Health & Body Parts Vocabulary",
+      "cards": [
+        {
+          "id": "health-1",
+          "front": "How do you say \"head\" in Spanish?",
+          "back": "cabeza",
+          "example": "Me duele la cabeza."
+        },
+        {
+          "id": "health-2",
+          "front": "What is the Spanish word for \"stomach\"?",
+          "back": "estómago",
+          "example": "Después de comer mucho, me duele el estómago."
+        },
+        {
+          "id": "health-3",
+          "front": "Translate: \"My throat hurts.\"",
+          "back": "Me duele la garganta.",
+          "example": "Cuando tengo gripe, me duele la garganta."
+        }
+      ]
+    }
+  ]
+}
