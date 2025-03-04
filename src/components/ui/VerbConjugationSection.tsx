@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Card from './Card';
 import VerbConjugationPractice from './VerbConjugationPractice';
 

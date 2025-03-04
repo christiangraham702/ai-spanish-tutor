@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Card from '@/components/ui/Card';
 import VerbConjugationSection from '@/components/ui/VerbConjugationSection';
 
+// Define the strategies directly in this file since we're having issues with the import
 const strategies = [
   {
     title: 'Context Clues',
@@ -42,6 +43,9 @@ interface Question {
   question: string;
   context: string;
 }
+
+// Type for error handling
+type ApiErrorType = Error;
 
 const ReadingStrategiesPage = () => {
   const [practiceText, setPracticeText] = useState(`
@@ -87,9 +91,10 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
       }
       
       setPracticeText(data.result);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error generating text:', error);
-      setGenerateError(error.message || 'Failed to generate text. Please try again.');
+      const errorMessage = error instanceof Error ? error.message : 'Failed to generate text. Please try again.';
+      setGenerateError(errorMessage);
     } finally {
       setIsGenerating(false);
     }
@@ -118,15 +123,16 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
       }
       
       setTextReview(data.result);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error reviewing text:', error);
-      setReviewError(error.message || 'Failed to review text. Please try again.');
+      const errorMessage = error instanceof Error ? error.message : 'Failed to review text. Please try again.';
+      setReviewError(errorMessage);
     } finally {
       setIsReviewing(false);
     }
   };
 
-  const handleGenerateQuestions = async () => {
+  const handleGenerateQuestions = useCallback(async () => {
     try {
       setIsGeneratingQuestions(true);
       setQuestionsError(null);
@@ -153,13 +159,14 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
       setSelectedQuestion(0);
       setUserAnswer('');
       setFeedback(null);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error generating questions:', error);
-      setQuestionsError(error.message || 'Failed to generate questions. Please try again.');
+      const errorMessage = error instanceof Error ? error.message : 'Failed to generate questions. Please try again.';
+      setQuestionsError(errorMessage);
     } finally {
       setIsGeneratingQuestions(false);
     }
-  };
+  }, [practiceText]);
 
   const handleSubmitAnswer = async () => {
     if (!userAnswer.trim()) {
@@ -191,9 +198,10 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
       }
       
       setFeedback(data.result);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error submitting answer:', error);
-      setSubmitError(error.message || 'Failed to submit answer. Please try again.');
+      const errorMessage = error instanceof Error ? error.message : 'Failed to submit answer. Please try again.';
+      setSubmitError(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -203,7 +211,7 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
     if (practiceText && !questions.length) {
       handleGenerateQuestions();
     }
-  }, [practiceText]);
+  }, [practiceText, questions.length, handleGenerateQuestions]);
 
   return (
     <div className="space-y-8">
@@ -282,13 +290,19 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
             <div className="border-t pt-4">
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Reading Tips:</h4>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Look for cognates like "estudiante", "medicina", and "universidad"</li>
-                <li>Use context clues to understand words like "temprano" (context: waking up)</li>
+                <li>Look for cognates like &ldquo;estudiante&rdquo;, &ldquo;medicina&rdquo;, and &ldquo;universidad&rdquo;</li>
+                <li>Use context clues to understand words like &ldquo;temprano&rdquo; (context: waking up)</li>
                 <li>Notice verb tenses to understand when actions occur</li>
               </ul>
             </div>
           </div>
         </Card>
+
+        {reviewError && (
+          <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg">
+            {reviewError}
+          </div>
+        )}
 
         {textReview && (
           <Card intent="accent" size="lg">
@@ -303,6 +317,13 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
       {questions.length > 0 && (
         <section className="space-y-6">
           <h2 className="text-2xl font-semibold text-gray-900">Comprehension Questions</h2>
+          
+          {questionsError && (
+            <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg">
+              {questionsError}
+            </div>
+          )}
+          
           <Card intent="primary" size="lg">
             <div className="space-y-6">
               <div className="flex justify-between items-center">
@@ -346,6 +367,12 @@ Los fines de semana, María visita a su familia. Su madre prepara comida delicio
                   className="w-full h-32 p-4 border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   disabled={isGeneratingQuestions}
                 />
+
+                {submitError && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg">
+                    {submitError}
+                  </div>
+                )}
 
                 <div className="flex justify-end">
                   <button

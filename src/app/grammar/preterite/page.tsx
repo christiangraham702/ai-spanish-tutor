@@ -124,7 +124,7 @@ const PreteritePage = () => {
                 <p className="text-gray-600">
                   Use the preterite for actions that were completed in the past.
                   <br />
-                  <span className="italic">Example: "Ayer comí una ensalada." (Yesterday I ate a salad.)</span>
+                  <span className="italic">Example: &ldquo;Ayer comí una ensalada.&rdquo; (Yesterday I ate a salad.)</span>
                 </p>
               </div>
             </li>
@@ -135,7 +135,7 @@ const PreteritePage = () => {
                 <p className="text-gray-600">
                   Use it for actions that occurred during a specific time period.
                   <br />
-                  <span className="italic">Example: "El año pasado viajé a España." (Last year I traveled to Spain.)</span>
+                  <span className="italic">Example: &ldquo;El año pasado viajé a España.&rdquo; (Last year I traveled to Spain.)</span>
                 </p>
               </div>
             </li>
@@ -146,7 +146,7 @@ const PreteritePage = () => {
                 <p className="text-gray-600">
                   Use it for actions that occurred one after another.
                   <br />
-                  <span className="italic">Example: "Me levanté, me duché y salí." (I got up, showered, and left.)</span>
+                  <span className="italic">Example: &ldquo;Me levanté, me duché y salí.&rdquo; (I got up, showered, and left.)</span>
                 </p>
               </div>
             </li>
