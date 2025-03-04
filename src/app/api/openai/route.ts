@@ -52,7 +52,7 @@ async function readUsageCounter(): Promise<number> {
     return data.count;
   } catch (error) {
     // If file-based approach fails (e.g., on Vercel), use in-memory counter
-    console.log('Using in-memory counter due to filesystem constraints');
+    console.log('Using in-memory counter due to filesystem constraints:', error instanceof Error ? error.message : 'Unknown error');
     return apiCallsToday;
   }
 }
@@ -87,7 +87,7 @@ async function incrementUsageCounter(): Promise<void> {
     fs.writeFileSync(counterPath, JSON.stringify(data), 'utf-8');
   } catch (error) {
     // If file operations fail, we're already using the in-memory counter
-    console.log('Using in-memory counter for increments due to filesystem constraints');
+    console.log('Using in-memory counter for increments due to filesystem constraints:', error instanceof Error ? error.message : 'Unknown error');
   }
 }
 
